@@ -1,0 +1,11 @@
+#carouseL {
+    max-height: 400px;
+    overflow: hidden;
+}
+
+@media (min-width: 360px) { 
+	#carouseL {
+    max-height: 300px;
+    overflow: hidden;
+}
+}
