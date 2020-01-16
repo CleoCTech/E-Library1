@@ -33,7 +33,7 @@ Route::get('/home', 'PagesController@home');
 Route::get('/dean', 'PagesController@dean');
 Route::get('/clubs', 'PagesController@clubs');
 Route::get('/sports', 'PagesController@sports');
-
+Route::get('/logout', 'Auth\LoginController@userlogout')->name('admin.logout'); 
 
 Route::prefix('admin')->group(function(){
 	// Route::get('/login', 'AdminLoginController@showLoginform')->name('admin.login');

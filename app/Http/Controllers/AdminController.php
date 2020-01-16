@@ -23,7 +23,7 @@ class AdminController extends Controller
     public function __construct()
     {
         $this->middleware('auth');
-        //$this->middleware('admin');
+        $this->middleware('admin');
     }
 
     /**
@@ -72,9 +72,10 @@ class AdminController extends Controller
         //create user
         $admin =new User;
         $admin->name = $request->input('name');
+        $admin->avatar ="https://via.placeholder.com/150";
         $admin->email = $request->input('email');
         $admin->password = Hash::make($request->input('password'));
-        $admin->role = $request->input('role');
+        $admin->role = $request->input('selectedRole');
         // $admin->user_id=auth()->user()->id;
         
         $admin->save();

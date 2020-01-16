@@ -35,13 +35,15 @@ class LoginController extends Controller
     public function __construct()
     {
         //dd("oya");
-        //$this->middleware('guest');
     }
     public function userlogout(){
+        //dd("oya");
+        Auth::logout();
         return redirect("/");
+
     }   
     public function loginRedirect(){
-        //dd("uii4");
+       // dd("uii4");
         if(Auth::user()->is_admin == 1){
             //dd("yes admin");
             if(Auth::user()->role == "Admin"){
@@ -52,6 +54,9 @@ class LoginController extends Controller
                 return redirect("/dashboard");
             }
             else if(Auth::user()->role == "Editor"){
+                return redirect("/");
+            }
+            else if(Auth::user()->role == "Customer"){
                 return redirect("/");
             }
         }else{

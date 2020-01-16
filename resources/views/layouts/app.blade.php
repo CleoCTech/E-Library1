@@ -19,6 +19,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
     <style>
        .open-button{
             /* Hidden by default */
@@ -232,24 +233,7 @@
           $(".input-text input").val(message2);
           $(".input-text input").focus();
         } 
-          //  a function to scroll down auto
-        // function scrollToBottomFunc() {
-        //     $('.message-wrapper').animate({
-        //         scrollTop: $('.message-wrapper').get(0).scrollHeight
-        //     }, 50);
-        // } 
-
-        // $(document).ready(function(){
-        // $("input").keyup(function(event){ 
-        //     $("div").html("Key: " + event.which);
-        // });
-        // });
-        
-        // if ($(document).on('keyup','.input-text input')) =true{
-        //     console.log("True");
-        // } else {
-            
-        // }    
+         
          function scrollToBottomFunc() {
             $('.message-wrapper').scrollTop($('.message-wrapper')[0].scrollHeight);
         }   
