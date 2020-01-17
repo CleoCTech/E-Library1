@@ -86,7 +86,7 @@
                                     <option value="Customer">Customer</option>
                                     <option value="Editor">Editor</option>
                                 </select>
-                                {{-- git add.
+                                {{-- git add .
                                 git commit -m "Messsage"
                                 git push origin master --}}
                                 {{-- <input id="role" type="text" class="form-control" name="role" required autocomplete="rol
