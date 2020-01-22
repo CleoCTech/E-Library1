@@ -15,7 +15,7 @@ class Admin
      */
     public function handle($request, Closure $next)
     {
-        if(Auth::user()->is_admin == 1 && Auth::user()->role == "Admin"){
+        if(Auth::user()->is_admin == 1 && Auth::user()->role == "Admin" or Auth::user()->role == "Author"){
             return $next($request);
         }
         return redirect()->back()->with("error", "Access denied.");

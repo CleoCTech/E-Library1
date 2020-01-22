@@ -83,27 +83,19 @@
                                 <select name="role" id="role1" class="form-control" onChange="myNewFunction(this);" >
                                     <option value="Admin">Admin</option>
                                     <option value="Author" selected>Author</option>
-                                    <option value="Customer">Customer</option>
+                                    {{-- <option value="Customer">Customer</option> --}}
                                     <option value="Editor">Editor</option>
                                 </select>
-                                {{-- git add .
-                                git commit -m "Messsage"
-                                git push origin master --}}
-                                {{-- <input id="role" type="text" class="form-control" name="role" required autocomplete="rol
-                                e"> --}}
+                               
                             </div>
                         </div>
                         <div class="form-group row">
                             <div class="col-md-6">
-                                <input id="selectedRole" type="hidden" class="form-control" name="item" required autocomplete="role">
+                                <input id="hidden-role" type="hidden" class="form-control" name="hidden-role">
                             </div>
                             
                         </div>
-                        <div class="form-group row">
-                            <div class="col-md-6">
-                                <input id="avatar" type="hidden" value="https://via.placeholder.com/150" class="form-control" name="item" required autocomplete="avatar">
-                            </div>
-                        </div>
+                
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
@@ -118,15 +110,19 @@
     </div>
     </div>
 @endsection 
-
+ {{-- git add .
+                                git commit -m "Messsage"
+                                git push origin master --}}
+                                {{-- <input id="role" type="text" class="form-control" name="role" required autocomplete="rol
+                                e"> --}}
 <script>
     function myNewFunction(sel) {
    // alert(sel.options[sel.selectedIndex].text);
-    document.getElementById("selectedRole").value = sel.options[sel.selectedIndex].text;
+    document.getElementById("hidden-role").value = sel.options[sel.selectedIndex].text;
     }
 
     window.addEventListener('load', function () {
    // alert("It's loaded!")
-    document.getElementById("selectedRole").value = document.getElementById("role1").value;
+    document.getElementById("hidden-role").value = document.getElementById("role1").value;
     })
 </script>

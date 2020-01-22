@@ -4,7 +4,8 @@
     <a href="/posts" class="btn btn-default">Go Back</a>
     {{-- variable $post comes from posts.index page --}}
     <h1>{{$post->title}}</h1>
-    <img style="width:100%" src="/storage/cover_images/{{$post->cover_image}}">
+    <img style="width:100%;" src="/storage/cover_images/{{$post->cover_image}}">
+    {{--  <img id="postimg" style="width:100%; height:530px; object-fit: cover; object-position: center center;" src="/storage/cover_images/{{$post->cover_image}}">  --}}
     <br><br>
     <div>
         {!!$post->body!!}

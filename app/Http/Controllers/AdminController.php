@@ -75,7 +75,9 @@ class AdminController extends Controller
         $admin->avatar ="https://via.placeholder.com/150";
         $admin->email = $request->input('email');
         $admin->password = Hash::make($request->input('password'));
-        $admin->role = $request->input('selectedRole');
+        $admin->is_admin=1;
+        $admin->role = $request->input('hidden-role');
+       // $admin->role = $request->input('hidden-role');
         // $admin->user_id=auth()->user()->id;
         
         $admin->save();
