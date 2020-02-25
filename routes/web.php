@@ -25,7 +25,7 @@
 	return 'This is user ' .$name.' with an id of ' .$id;
 });*/
 
-Route::get('/', 'PagesController@index');
+Route::get('/', 'PagesController@index'); 
 Route::get('/about', 'PagesController@about');
 Route::get('/services', 'PagesController@services');
 Route::get('/chat', 'testHomeController@testHome');
